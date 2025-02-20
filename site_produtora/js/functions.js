@@ -1,30 +1,23 @@
 jQuery(function() {
-    jQuery(".pf__works__slider").slick({
-        prevArrow: jQuery(".pf__works__slider__btn-prev"),
-        nextArrow: jQuery(".pf__works__slider__btn-next"),
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
 
-    jQuery(".pf__header__options-contrast__white").on("click", function(event) {
-        jQuery("body").removeClass("pf__dark");
-        jQuery(".pf__header__options-contrast span").removeClass("active");
-        jQuery(this).addClass("active");
-    });
 
-    jQuery(".pf__header__options-contrast__black").on("click", function(event) {
-        jQuery("body").addClass("pf__dark");
-        jQuery(".pf__header__options-contrast span").removeClass("active");
-        jQuery(this).addClass("active");
+    // Função para rolar a página até o vídeo centralizado
+    jQuery('.pf__seta').on('click', function(e) {
+        e.preventDefault();
+
+        var $video = jQuery('.pf__portfolio__video');
+        var videoOffset = $video.offset().top;             // Posição do elemento
+        var videoHeight = $video.outerHeight();              // Altura do elemento
+        var windowHeight = jQuery(window).height();          // Altura da janela
+
+        // Calcula a posição de scroll para centralizar o vídeo na viewport
+        var scrollPosition = videoOffset - ((windowHeight - videoHeight) / 2);
+
+        jQuery('html, body').animate({
+            scrollTop: scrollPosition
+        }, 1000); // Duração da animação em milissegundos
     });
 });
+
+
+

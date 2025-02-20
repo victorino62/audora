@@ -1,18 +1,103 @@
+.iconify {
+    transform: translateY(-6px);
+  }
+
+.pf__seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pf__portfolio__video {
+    position: relative;
+    padding-bottom: 56.25%; // 16:9 = 9/16 = 0.5625 ou 56.25%
+    height: 0;
+    overflow: hidden;
+    max-width: 80%;
+    margin: 0 auto; // centraliza o container
+  }
+  
+  .pf__portfolio__video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+.pf__works {
+    font-family: "Lora", "Times New Roman";
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // flex-wrap: wrap;
+    text-justify: center;
+    width: 80%;
+    margin: 0 auto;
+    // margin-top: 30px;
+
+    @media (max-width: 1024px) {
+        justify-content: center;
+    }
+    @media (max-width: 700px) {
+        width: 90%;
+    }
+
+    &__img {
+        width: 90%;
+        // flex: 0 0 80%;
+        margin-bottom: -10px;
+        margin: -100px auto; // centraliza a imagem
+        
+        img {
+            width: 80%;
+        }
+        @media (max-width: 1024px) {
+            flex: 0 0 45%;
+        }
+        @media (max-width: 700px) {
+            flex: 0 0 100%;
+        }
+    }
+    
+}
+
+.gridicons--dropdown {
+    display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m7 10l5 5l5-5z'/%3E%3C/svg%3E")
+              no-repeat center center;
+  background-size: contain;
+}
+
+  
+
 .pf__header {
+    &__nav__menu {
+        justify-content: right;
+        display: flex; 
+        list-style: none; 
+        margin: 45px;
+        padding: 0;
+    }
     &__content {
         position: relative;
         width: 80%;
         margin: 0 auto;
-        margin-top: 50px
+        margin-top: 90px
     }
     &__nav__logo {
-        width: 150px;
+        width: 180px;
         height: auto;
         position: absolute;
-        top: 20px;
-        left: 20px;
+        top: -80px;
+        left: 0px;
         img {
-            width: 90%;
+            width: 150%;
             height: auto;
         }
     }
@@ -68,58 +153,44 @@
     }
 }
 .pf__bio {
-    position: relative;
+    display: flex;
+    align-items: center; // Alinha verticalmente
+    justify-content: space-between; // Espaça os itens
     width: 80%;
-    margin: 0 auto;
-    margin-top: 400px;
+    margin: 100px auto;
+  
+    &__foto {
+      flex: 0 0 40%;
+      margin-top: 20px;
+      
+      img {
+        width: 90%;
+      }
+    }
+  
     &__content {
-        width: 80%;
-        @media (max-width: 700px) {
-            width: 90%;
-        }
-    }
-    p {
-        font-size: 40px;
-        line-height: 50px;
-        margin-bottom: 50px;
+      flex: 1;         // Ocupa o restante do espaço
+      padding-left: 20px; // Espaço entre a foto e o texto
+  
+      p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 20px;
+  
         @media (max-width: 1024px) {
-            font-size: 25px;
-            line-height: 35px;
-            width: 100%;
+          font-size: 25px;
+          line-height: 35px;
         }
+  
         @media (max-width: 700px) {
-            font-size: 18px;
-            line-height: 27px;
+          font-size: 18px;
+          line-height: 27px;
         }
+      }
     }
-}
+  }
+  
 
-.pf__bio-aditional {
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 400px;
-    &__content {
-        width: 80%;
-        @media (max-width: 700px) {
-            width: 90%;
-        }
-    }
-    p {
-        font-size: 40px;
-        line-height: 50px;
-        margin-bottom: 50px;
-        @media (max-width: 1024px) {
-            font-size: 25px;
-            line-height: 35px;
-            width: 100%;
-        }
-        @media (max-width: 700px) {
-            font-size: 18px;
-            line-height: 27px;
-        }
-    }
-}
 .pf__contact {
     position: relative;
     width: 80%;
