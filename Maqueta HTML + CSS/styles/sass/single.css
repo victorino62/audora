@@ -1,0 +1,150 @@
+.pf__single__content {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 1024px) {
+  .pf__single__content {
+    width: 100%;
+  }
+}
+.pf__single__header {
+  text-align: center;
+}
+.pf__single__header__thumb {
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .pf__single__header__thumb {
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+.pf__single__header__thumb img {
+  border: 2px solid #fff;
+  width: 80%;
+  height: auto;
+}
+.pf__single__header__btn-home {
+  display: inline-block;
+  position: relative;
+  font-family: "Lora", "Times New Roman";
+  font-size: 20px;
+  color: #fff;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  border-bottom: 2px solid #fff;
+}
+.pf__single__header__btn-home:hover {
+  border-color: transparent !important;
+}
+.pf__single__info {
+  text-align: center;
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .pf__single__info {
+    font-size: 20px;
+    line-height: 25px;
+    width: 90%;
+  }
+}
+.pf__single__info h2 {
+  font-family: "Lora", "Times New Roman";
+  font-size: 60px;
+  line-height: 70px;
+  color: #fff;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+@media (max-width: 1024px) {
+  .pf__single__info h2 {
+    font-size: 40px;
+    line-height: 45px;
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .pf__single__info h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+.pf__single__info span {
+  font-family: "Lora", "Times New Roman";
+  font-size: 60px;
+  line-height: 70px;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .pf__single__info span {
+    font-size: 40px;
+    line-height: 45px;
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .pf__single__info span {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+.pf__single__info p {
+  font-size: 30px;
+  line-height: 40px;
+  color: #fff;
+  margin-top: 120px;
+  margin-bottom: 150px;
+}
+@media (max-width: 1024px) {
+  .pf__single__info p {
+    font-size: 20px;
+    line-height: 25px;
+    width: 100%;
+  }
+}
+.pf__single__image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 150px;
+}
+.pf__single__image img {
+  width: 100%;
+  height: auto;
+}
+.pf__single__control-links {
+  display: block;
+  list-style: none;
+  text-align: center;
+}
+.pf__single__control-links li {
+  display: inline-block;
+  font-family: "Lora", "Times New Roman";
+  font-size: 20px;
+  margin: 0px;
+}
+@media (max-width: 700px) {
+  .pf__single__control-links li {
+    font-size: 18px;
+  }
+}
+.pf__single__control-links li a {
+  border-bottom: 2px solid #fff;
+}
+.pf__single__control-links li a:hover {
+  border-color: transparent !important;
+}
+.pf__single__control-links li:nth-child(2) {
+  margin-left: 120px;
+}
+@media (max-width: 700px) {
+  .pf__single__control-links li:nth-child(2) {
+    margin-left: 60px;
+  }
+}/*# sourceMappingURL=single.css.map */

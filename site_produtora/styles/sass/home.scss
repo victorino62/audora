@@ -1,0 +1,207 @@
+.pf__header {
+    &__content {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px
+    }
+    &__nav__logo {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        img {
+            width: 90%;
+            height: auto;
+        }
+    }
+    &__logo {
+        text-align: right;
+        font-family: "Lora", "Times New Roman";
+        font-size: 90px;
+        @media (max-width: 1024px) {
+            font-size: 60px;
+        }
+        @media (max-width: 700px) {
+            font-size: 40px;
+        }
+    }
+    &__pergunta {
+        font-family: "Lora", "Times New Roman";
+        font-size: 85px;
+        @media (max-width: 1024px) {
+            font-size: 60px;
+        }
+        @media (max-width: 700px) {
+            font-size: 40px;
+        }
+    }
+    &__options-contrast {
+        font-family: "Lora", "Times New Roman";
+        font-weight: 500;
+        font-size: 20px;
+        position: fixed;
+        right: 40px;
+        top: 105px;
+        margin-top: 0px;
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -ms-transform-origin: right, top;
+        -webkit-transform-origin: right, top;
+        z-index: 3;
+        @media (max-width: 700px) {
+            right: 10px;
+            font-size: 18px;
+        }
+        span {
+           cursor: pointer; 
+        }
+        .active {
+            font-weight: 600;
+            border-bottom: 2px solid #000;
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+}
+.pf__bio {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 400px;
+    &__content {
+        width: 80%;
+        @media (max-width: 700px) {
+            width: 90%;
+        }
+    }
+    p {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+        @media (max-width: 1024px) {
+            font-size: 25px;
+            line-height: 35px;
+            width: 100%;
+        }
+        @media (max-width: 700px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+.pf__bio-aditional {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 400px;
+    &__content {
+        width: 80%;
+        @media (max-width: 700px) {
+            width: 90%;
+        }
+    }
+    p {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+        @media (max-width: 1024px) {
+            font-size: 25px;
+            line-height: 35px;
+            width: 100%;
+        }
+        @media (max-width: 700px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+.pf__contact {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 400px;
+    &__content {
+        width: 80%;
+    }
+    &__title {
+        font-size: 120px;
+       font-family: "Lora", "Times New Roman";
+       margin-bottom: 120px;
+       @media (max-width: 1024px) {
+        font-size: 80px;
+       }
+       @media (max-width: 700px) {
+        font-size: 60px;
+       }
+    }
+    p {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 50px;
+        @media (max-width: 1024px) {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        @media (max-width: 700px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+    a {
+        display: inline-block;
+        border-bottom: 2px solid #000;
+        &:hover {
+            border-color: transparent;
+        }
+    }
+}
+.pf__footer {
+    &__content {
+        position: relative;
+        width: 80%;
+        margin:  0 auto;
+        margin-top: 200px;
+        margin-bottom: 30px;
+    }
+    &__social-links {
+        display: inline;
+        list-style: none;
+        position: fixed;
+        right: -52px;
+        bottom: 150px;
+        margin-top: 0px;
+        transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -ms-transform-origin: right, top;
+        -webkit-transform-origin: right, top;
+        @media (max-width: 700px) {
+            right: -76px;
+        }
+        li {
+            display: inline-block;
+            font-family: "Lora", "Times New Roman";
+            font-size: 20px;
+            margin: 0px;
+            @media (max-width: 700px) {
+                font-size: 18px;
+            }
+            a {
+                margin-left: 30px;
+                border-bottom: 2px solid #000;
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    p {
+        font-family: "Lora", "Times New Roman";
+        font-size: 15px; 
+    }
+}
