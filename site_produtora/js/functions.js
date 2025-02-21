@@ -17,6 +17,27 @@ jQuery(function() {
             scrollTop: scrollPosition
         }, 1000); // Duração da animação em milissegundos
     });
+
+    /*
+  jQuery('#formContato').on('submit', function(e) {
+    e.preventDefault();
+    
+    // Pegando os valores do formulário
+    var email = jQuery('#email').val();
+    var mensagem = jQuery('#mensagem').val();
+
+    // Aqui você pode implementar a lógica de envio (Fetch, AJAX, etc.)
+
+    console.log('Email:', email);
+    console.log('Mensagem:', mensagem);
+
+    alert('Mensagem enviada com sucesso!');
+
+    // Resetar formulário (opcional)
+    jQuery(this).trigger('reset');
+  });
+*/
+
 });
 
 

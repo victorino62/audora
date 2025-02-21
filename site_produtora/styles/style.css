@@ -1,8 +1,11 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Lora:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -82,6 +85,18 @@ a {
   border-color: #fff !important;
 }
 
+/*
+.roboto-mono-<uniquifier> {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+*/
+body {
+  background-color: rgba(160, 86, 170, 0.1450980392);
+}
+
 .iconify {
   transform: translateY(-6px);
 }
@@ -131,22 +146,13 @@ a {
   }
 }
 .pf__works__img {
-  width: 90%;
-  margin-bottom: -10px;
-  margin: -100px auto;
+  width: 100%;
+  margin-top: -100px;
 }
 .pf__works__img img {
+  display: block;
+  margin: 0 auto;
   width: 80%;
-}
-@media (max-width: 1024px) {
-  .pf__works__img {
-    flex: 0 0 45%;
-  }
-}
-@media (max-width: 700px) {
-  .pf__works__img {
-    flex: 0 0 100%;
-  }
 }
 
 .gridicons--dropdown {
@@ -160,6 +166,7 @@ a {
 
 .pf__header__nav__menu {
   justify-content: right;
+  font-family: "Roboto Mono", "Times New Roman";
   display: flex;
   list-style: none;
   margin: 45px;
@@ -184,7 +191,8 @@ a {
 }
 .pf__header__logo {
   text-align: right;
-  font-family: "Lora", "Times New Roman";
+  font-family: "Roboto Mono", "Times New Roman";
+  margin-top: 40px;
   font-size: 90px;
 }
 @media (max-width: 1024px) {
@@ -198,7 +206,7 @@ a {
   }
 }
 .pf__header__pergunta {
-  font-family: "Lora", "Times New Roman";
+  font-family: "Roboto Mono", "Times New Roman";
   font-size: 85px;
 }
 @media (max-width: 1024px) {
@@ -210,37 +218,6 @@ a {
   .pf__header__pergunta {
     font-size: 40px;
   }
-}
-.pf__header__options-contrast {
-  font-family: "Lora", "Times New Roman";
-  font-weight: 500;
-  font-size: 20px;
-  position: fixed;
-  right: 40px;
-  top: 105px;
-  margin-top: 0px;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -ms-transform-origin: right, top;
-  -webkit-transform-origin: right, top;
-  z-index: 3;
-}
-@media (max-width: 700px) {
-  .pf__header__options-contrast {
-    right: 10px;
-    font-size: 18px;
-  }
-}
-.pf__header__options-contrast span {
-  cursor: pointer;
-}
-.pf__header__options-contrast .active {
-  font-weight: 600;
-  border-bottom: 2px solid #000;
-}
-.pf__header__options-contrast .active:hover {
-  border-color: transparent;
 }
 
 .pf__bio {
@@ -279,103 +256,100 @@ a {
   }
 }
 
-.pf__contact {
-  position: relative;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 400px;
-}
-.pf__contact__content {
-  width: 80%;
-}
-.pf__contact__title {
-  font-size: 120px;
-  font-family: "Lora", "Times New Roman";
-  margin-bottom: 120px;
-}
-@media (max-width: 1024px) {
-  .pf__contact__title {
-    font-size: 80px;
-  }
-}
-@media (max-width: 700px) {
-  .pf__contact__title {
-    font-size: 60px;
-  }
-}
-.pf__contact p {
-  font-size: 40px;
-  line-height: 50px;
-  margin-bottom: 50px;
-}
-@media (max-width: 1024px) {
-  .pf__contact p {
-    font-size: 25px;
-    line-height: 35px;
-  }
-}
-@media (max-width: 700px) {
-  .pf__contact p {
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-.pf__contact a {
-  display: inline-block;
-  border-bottom: 2px solid #000;
-}
-.pf__contact a:hover {
-  border-color: transparent;
-}
-
 .pf__footer__content {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-bottom: 30px;
-}
-.pf__footer__social-links {
-  display: inline;
-  list-style: none;
-  position: fixed;
-  right: -52px;
-  bottom: 150px;
-  margin-top: 0px;
-  transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -ms-transform-origin: right, top;
-  -webkit-transform-origin: right, top;
-}
-@media (max-width: 700px) {
-  .pf__footer__social-links {
-    right: -76px;
-  }
-}
-.pf__footer__social-links li {
-  display: inline-block;
-  font-family: "Lora", "Times New Roman";
-  font-size: 20px;
-  margin: 0px;
-}
-@media (max-width: 700px) {
-  .pf__footer__social-links li {
-    font-size: 18px;
-  }
-}
-.pf__footer__social-links li a {
-  margin-left: 30px;
-  border-bottom: 2px solid #000;
-}
-.pf__footer__social-links li a:hover {
-  border-color: transparent;
 }
 .pf__footer p {
   font-family: "Lora", "Times New Roman";
   font-size: 15px;
 }
 
+/********************************************
+ * SEÇÃO DE CONTATO
+ ********************************************/
+.pf__contact {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+.pf__contact__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pf__contact__info h1 {
+  font-family: "Lora", "Times New Roman";
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.pf__contact__info p {
+  font-family: "Lora", "Times New Roman";
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.pf__contact__info__email, .pf__contact__info__phone {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.pf__contact__social {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.pf__contact__social img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.pf__contact__form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.pf__contact__form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.pf__contact__form form label {
+  font-family: "Lora", "Times New Roman";
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.pf__contact__form form input,
+.pf__contact__form form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+}
+.pf__contact__form form button {
+  background-color: #6b4a8f;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Lora", "Times New Roman";
+  font-size: 1rem;
+  font-weight: bold;
+}
+.pf__contact__form form button:hover {
+  background-color: #5a3d76;
+}
+
+@media (max-width: 768px) {
+  .pf__contact {
+    flex-direction: column;
+  }
+}
 .pf__single__content {
   position: relative;
   width: 80%;
