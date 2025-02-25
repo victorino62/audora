@@ -93,6 +93,65 @@ a {
     font-style: normal;
   }
 */
+.waveform-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.waveform-label {
+  width: 850px;
+  font-weight: bold;
+  margin-right: 50px;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+.waveform {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+.time,
+.duration {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(100, 19, 19, 0.75);
+  padding: 2px;
+  color: #ddd;
+  font-size: 11px;
+}
+
+.time {
+  left: -50px;
+}
+
+.duration {
+  right: -50px;
+}
+
+.hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.5);
+  mix-blend-mode: overlay;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.waveform:hover #hover {
+  opacity: 1;
+}
+
 body {
   background-color: rgba(160, 86, 170, 0.1450980392);
 }
@@ -262,6 +321,8 @@ body {
   margin: 0 auto;
   margin-top: 100px;
   margin-bottom: 30px;
+  justify-content: center;
+  text-align: center;
 }
 .pf__footer p {
   font-family: "Lora", "Times New Roman";
