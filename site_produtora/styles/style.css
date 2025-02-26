@@ -93,6 +93,37 @@ a {
     font-style: normal;
   }
 */
+/* Posicionamento fixo no canto inferior direito */
+#whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/733/733585.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 9999; /* para garantir que fique na frente de outros elementos */
+}
+
+/* Classe que controla o “tremor” via animação de keyframes */
+.shake {
+  animation: shake-animation 0.5s ease-in-out;
+}
+
+/* Keyframes para o efeito de tremor */
+@keyframes shake-animation {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+  40%, 80% {
+    transform: translateX(5px);
+  }
+}
 .waveform-wrapper {
   display: flex;
   align-items: center;

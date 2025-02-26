@@ -16,6 +16,19 @@ jQuery(function($) {
     }, 1000);
   });
 
+// Define intervalo para aplicar o tremor a cada 10 segundos, por exemplo
+setInterval(function() {
+  // Adiciona a classe que faz tremer
+  $("#whatsapp-icon").addClass("shake");
+  
+  // Remove a classe após 0.6s (dur. da animação) para não ficar tremendo continuamente
+  setTimeout(function() {
+    $("#whatsapp-icon").removeClass("shake");
+  }, 500);
+  
+}, 10000); // 10000ms = 10 segundos
+  
+
 
 // Seleciona todos os containers de waveform
 $('.waveform').each(function(index, element) {
@@ -84,6 +97,7 @@ $('.waveform').each(function(index, element) {
   });
 });
 });
+
 
 
 
