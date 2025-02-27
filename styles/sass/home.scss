@@ -43,10 +43,23 @@
 
   .waveform-label {
     width: 850px; // ajuste conforme necessário
+    // max-width: 850px;
     font-weight: bold;
     margin-right: 50px;
     margin-top: -100px;
     margin-bottom: 100px;
+    @media (max-width: 1024px) {
+      justify-content: center;
+      width: 300px;
+      margin-top: -150px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 700px) {
+      justify-content: center;
+      width: 300px;
+      margin-top: -150px;
+      margin-bottom: 30px;
+    }
   }
 
 
@@ -58,6 +71,17 @@
   width: 100%;
   margin-top: -100px;
   margin-bottom: 100px;
+  @media (max-width: 1024px) {
+    justify-content: center;
+    width: 50%;
+    margin-top: -80px;
+  }
+  @media (max-width: 700px) {
+    justify-content: center;
+    width: 50%;
+    margin-top: -80px;
+  }
+  
 }
 .time,
 .duration {
@@ -138,19 +162,29 @@ body {
 
     @media (max-width: 1024px) {
         justify-content: center;
+        width: 90%;
     }
     @media (max-width: 700px) {
         width: 90%;
     }
 
     &__img {
-        width: 100%;
-        margin-top: -100px; // Se quiser deslocar para cima
+        
+        
         
         img {
           display: block;
           margin: 0 auto;  // Centraliza horizontalmente
           width: 80%;      // Ajuste se quiser
+          margin-top: -100px; // Se quiser deslocar para cima
+        }
+        @media (max-width: 1024px) {
+          width: 130%;
+          margin-top: 50px;
+        }
+        @media (max-width: 700px) {
+          width: 130%;
+          margin-top: 50px;
         }
       }
       
@@ -158,67 +192,209 @@ body {
 }
 
 .gridicons--dropdown {
-    display: inline-block;
+  display: inline-block;
   position: relative;
+  max-width: 200px;
   width: 200px;
   height: 200px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m7 10l5 5l5-5z'/%3E%3C/svg%3E")
               no-repeat center center;
   background-size: contain;
+  @media (max-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
+  @media (max-width: 700px) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-  
+
+// MENU TOPO
+
 
 .pf__header {
-    &__nav__menu {
-        justify-content: right;
-        font-family: "Roboto Mono", "Times New Roman";
-        display: flex; 
-        list-style: none; 
-        margin: 45px;
-        padding: 0;
+  &__nav {
+    position: relative; /* Necessário para posicionar os elementos absolutos */
+    
+  }
+
+  &__content {
+    display: flex;
+    justify-content: left;
+    // align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    // margin-top: 90px;
+    @media (max-width: 1024px) {
+      //justify-content: center;
+      width: 90%;
     }
-    &__content {
-        position: relative;
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 90px
+    @media (max-width: 700px) {
+      width: 90%;
     }
-    &__nav__logo {
-        width: 180px;
-        height: auto;
-        position: absolute;
-        top: -80px;
-        left: 0px;
-        img {
-            width: 150%;
-            height: auto;
-        }
+  }
+
+  &__nav__menu {
+    justify-content: right;
+    text-transform: lowercase;
+    font-weight: normal;
+    font-family: "Roboto Mono", "Times New Roman";
+    display: flex; 
+    // list-style: none; 
+    margin: 45px;
+    padding: 0;
+    margin-top: -80px;
+    
+    li {
+      margin-right: 20px;
+      margin-top: -140px;
+
     }
-    &__logo {
-        text-align: right;
-        font-family: "Roboto Mono", "Times New Roman";
-        margin-top: 40px;
-        font-size: 90px;
-        @media (max-width: 1024px) {
-            font-size: 60px;
-        }
-        @media (max-width: 700px) {
-            font-size: 40px;
-        }
+  }
+  &__nav__logo {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    position: relative;
+    top: -80px;
+    left: 0;
+    img {
+      width: 140%;
+      height: auto;
     }
-    &__pergunta {
-        font-family: "Roboto Mono", "Times New Roman";
-        font-size: 85px;
-        @media (max-width: 1024px) {
-            font-size: 60px;
-        }
-        @media (max-width: 700px) {
-            font-size: 40px;
-        }
+    @media (max-width: 1024px) {
+      font-size: 60px;
+      // width: 80%;
+      // margin: 0 auto;
+      // top: -80px;
+      // margin-top: -90px;
+    }
+    @media (max-width: 700px) {
+      font-size: 40px;
+      // width: 80%;
+      // margin: 0 auto;
+      // top: -80px;
+      // margin-top: -90px;
+    }
+  }
+  
+  &__pergunta {
+    font-family: "Roboto Mono", "Times New Roman";
+    font-size: 85px;
+    top: -80px;
+    width: 90%;
+    margin-top: -90px;
+    text-justify: center;
+    @media (max-width: 1024px) {
+      font-size: 60px;
+      width: 80%;
+      margin: 0 auto;
+      top: -80px;
+      margin-top: -90px;
     }
     
+    @media (max-width: 1024px) {
+      font-size: 60px;
+      width: 80%;
+      margin: 0 auto;
+      top: -80px;
+      margin-top: -90px;
+    }
+    @media (max-width: 700px) {
+      font-size: 40px;
+      width: 80%;
+      margin: 0 auto;
+      top: -80px;
+      margin-top: -90px;
+    }
+  }
 }
+
+/* Estilos para o ícone de hambúrguer e menu mobile */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 40px; /* ajuste conforme necessário */
+  right: 20px;
+  z-index: 10000;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  position: relative;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  top: 8px;
+}
+
+/* Media queries para mobile */
+@media (max-width: 1024px) {
+  /* Exibe o ícone de hambúrguer */
+  .menu-toggle {
+    display: block;
+  }
+  
+  /* Oculta o menu principal por padrão */
+  
+  .pf__header__nav__menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffffb4;
+    position: absolute;
+    top: 150px; /* posição abaixo do header */
+    right: -30px;
+    padding: 0 10px;
+    //border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 9999;
+    max-height: 0;         /* fechado inicialmente */
+    overflow: hidden; 
+    transition: max-height 0.4s ease-in-out;
+  }
+  
+  /* Exibe o menu quando ativado */
+  .pf__header__nav__menu.active {
+    display: flex;
+    max-height: 500px;
+  }
+  
+  .pf__header__nav__menu li {
+    margin: 10px 10px;
+    
+    text-align: right;
+    
+  }
+}
+
+/* Em telas maiores, garante que o ícone não apareça */
+@media (min-width: 1025px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+
 .pf__bio {
     display: flex;
     align-items: center; // Alinha verticalmente
@@ -245,6 +421,22 @@ body {
         margin-bottom: 20px;
   
         @media (max-width: 1024px) {
+          @at-root .pf__bio {
+            flex-direction: column;
+            align-items: center;
+
+            &__foto {
+              order: 1;
+              width: 60%;
+              margin: 20px 0;
+            }
+
+            &__content {
+              order: 2;
+              padding-left: 0;
+              text-align: center;
+            }
+          }
           font-size: 25px;
           line-height: 35px;
         }
@@ -304,8 +496,13 @@ body {
         margin-bottom: 0.5rem;
       }
   
-      &__email,
+      &__email {
+        font-family: "Lora", "Times New Roman";
+        font-weight: bold;
+        margin-top: 1rem;
+      }
       &__phone {
+        font-family: "Lora", "Times New Roman";
         font-weight: bold;
         margin-top: 1rem;
       }
@@ -327,6 +524,7 @@ body {
       flex: 1;              // Segunda coluna
       display: flex;
       align-items: center;
+      font-family: "Lora", "Times New Roman";
   
       form {
         width: 100%;
@@ -336,11 +534,12 @@ body {
         label {
           font-family: "Lora", "Times New Roman";
           font-weight: 700;
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.75rem;
         }
   
         input,
         textarea {
+          font-family: "Lora", "Times New Roman";
           width: 100%;
           margin-bottom: 1rem;
           padding: 0.75rem;
@@ -352,7 +551,7 @@ body {
           background-color: #6b4a8f; // Ajuste conforme seu design
           color: #fff;
           border: none;
-          padding: 0.75rem;
+          padding: 1rem;
           border-radius: 4px;
           cursor: pointer;
           font-family: "Lora", "Times New Roman";

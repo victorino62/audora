@@ -98,6 +98,11 @@ $('.waveform').each(function(index, element) {
 });
 });
 
+$(document).ready(function(){
+  $('.menu-toggle').click(function(){
+    $('.pf__header__nav__menu').toggleClass('active');
+  });
+});
 
 
 
