@@ -238,7 +238,7 @@ body {
 
   &__nav__menu {
     justify-content: right;
-    text-transform: lowercase;
+    // text-transform: uppercase;
     font-weight: normal;
     font-family: "Roboto Mono", "Times New Roman";
     display: flex; 
@@ -258,10 +258,10 @@ body {
     max-width: 180px;
     height: auto;
     position: relative;
-    top: -80px;
+    top: -60px;
     left: 0;
     img {
-      width: 140%;
+      width: 300%;
       height: auto;
     }
     @media (max-width: 1024px) {
@@ -282,10 +282,10 @@ body {
   
   &__pergunta {
     font-family: "Roboto Mono", "Times New Roman";
-    font-size: 85px;
-    top: -80px;
+    font-size: 80px;
+    top: -60px;
     width: 90%;
-    margin-top: -90px;
+    margin-top: -60px;
     text-justify: center;
     @media (max-width: 1024px) {
       font-size: 60px;
@@ -363,6 +363,7 @@ body {
     background-color: #ffffffb4;
     position: absolute;
     top: 150px; /* posição abaixo do header */
+    margin-top: -200px;
     right: -30px;
     padding: 0 10px;
     //border: 1px solid #ccc;
