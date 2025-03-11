@@ -57,6 +57,7 @@
     @media (max-width: 700px) {
       justify-content: center;
       width: 300px;
+      height: auto;
       margin-top: -150px;
       margin-bottom: 30px;
     }
@@ -73,12 +74,14 @@
   margin-bottom: 100px;
   @media (max-width: 1024px) {
     justify-content: center;
-    width: 50%;
+    width: 80%;
+    height: 100px;
     margin-top: -80px;
   }
   @media (max-width: 700px) {
     justify-content: center;
-    width: 50%;
+    width: 80%;
+    height: 100px;
     margin-top: -80px;
   }
   
@@ -114,7 +117,7 @@
 
 
 
-$background-color: #a056aa25;
+$background-color: #2b152a25;
 
 body {
     background-color: $background-color;
@@ -176,7 +179,8 @@ body {
         width: 90%;
     }
     @media (max-width: 700px) {
-        width: 90%;
+        width: 80%;
+        font-size: 25px;
     }
 
     &__img {
@@ -390,21 +394,25 @@ body {
   
     &__foto {
       flex: 0 0 40%;
-      margin-top: 20px;
+      margin-top: 10px;
+      align-items: center;
+      justify-content: center;
       
       img {
-        width: 90%;
+        width: 80%;
+        align-items: center;
       }
     }
   
     &__content {
       flex: 1;         // Ocupa o restante do espaço
-      padding-left: 20px; // Espaço entre a foto e o texto
+      padding-left: 10px; // Espaço entre a foto e o texto
   
       p {
         font-size: 20px;
         line-height: 30px;
         margin-bottom: 20px;
+        margin-top: 20px;
   
         @media (max-width: 1024px) {
           @at-root .pf__bio {
@@ -413,8 +421,8 @@ body {
 
             &__foto {
               order: 1;
-              width: 60%;
-              margin: 20px 0;
+              width: 70%;
+              padding-left: 45px;
             }
 
             &__content {

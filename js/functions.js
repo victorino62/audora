@@ -66,8 +66,9 @@ $('.waveform').each(function(index, element) {
     container: element,
     waveColor: gradient,
     progressColor: progressGradient,  
-    barWidth: 8,
+    barWidth: 5,
     url: audioUrl,
+    height: 100,
   });
 
   // Evento de interação: play/pause ao clicar

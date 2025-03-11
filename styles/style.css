@@ -150,6 +150,7 @@ a {
   .waveform-label {
     justify-content: center;
     width: 300px;
+    height: auto;
     margin-top: -150px;
     margin-bottom: 30px;
   }
@@ -165,14 +166,16 @@ a {
 @media (max-width: 1024px) {
   .waveform {
     justify-content: center;
-    width: 50%;
+    width: 80%;
+    height: 100px;
     margin-top: -80px;
   }
 }
 @media (max-width: 700px) {
   .waveform {
     justify-content: center;
-    width: 50%;
+    width: 80%;
+    height: 100px;
     margin-top: -80px;
   }
 }
@@ -214,7 +217,7 @@ a {
 }
 
 body {
-  background-color: rgba(160, 86, 170, 0.1450980392);
+  background-color: rgba(43, 21, 42, 0.1450980392);
 }
 
 .pf__seta {
@@ -277,7 +280,8 @@ body {
 }
 @media (max-width: 700px) {
   .pf__works {
-    width: 90%;
+    width: 80%;
+    font-size: 25px;
   }
 }
 .pf__works__img img {
@@ -444,19 +448,23 @@ body {
 }
 .pf__bio__foto {
   flex: 0 0 40%;
-  margin-top: 20px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
 }
 .pf__bio__foto img {
-  width: 90%;
+  width: 80%;
+  align-items: center;
 }
 .pf__bio__content {
   flex: 1;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .pf__bio__content p {
   font-size: 20px;
   line-height: 30px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 @media (max-width: 1024px) {
   .pf__bio__content p {
@@ -469,8 +477,8 @@ body {
   }
   .pf__bio__foto {
     order: 1;
-    width: 60%;
-    margin: 20px 0;
+    width: 70%;
+    padding-left: 45px;
   }
   .pf__bio__content {
     order: 2;
