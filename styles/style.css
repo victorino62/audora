@@ -217,14 +217,15 @@ body {
   background-color: rgba(160, 86, 170, 0.1450980392);
 }
 
-.iconify {
-  transform: translateY(-6px);
-}
-
 .pf__seta {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .pf__seta {
+    justify-content: center;
+  }
 }
 
 .pf__portfolio__video {
@@ -234,6 +235,19 @@ body {
   overflow: hidden;
   max-width: 80%;
   margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .pf__portfolio__video {
+    justify-content: center;
+    width: 90%;
+  }
+}
+@media (max-width: 700px) {
+  .pf__portfolio__video {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 56.25%;
+  }
 }
 
 .pf__portfolio__video iframe {
@@ -309,163 +323,113 @@ body {
 
 .pf__header__nav {
   position: relative; /* Necessário para posicionar os elementos absolutos */
+  display: flex;
+  width: 100%;
+}
+.pf__header__nav__logo {
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 20px;
+}
+.pf__header__nav__logo img {
+  width: 100%;
+  height: auto;
+}
+.pf__header__nav__menu {
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-weight: normal;
+  font-family: "Roboto Mono", "Times New Roman";
+  margin: 50px;
+  padding: 20px;
+  left: 450px;
+}
+.pf__header__nav__menu li {
+  margin: 0 15px;
 }
 .pf__header__content {
   display: flex;
-  justify-content: left;
   width: 80%;
   margin: 0 auto;
-}
-@media (max-width: 1024px) {
-  .pf__header__content {
-    width: 90%;
-  }
-}
-@media (max-width: 700px) {
-  .pf__header__content {
-    width: 90%;
-  }
-}
-.pf__header__nav__menu {
-  justify-content: right;
-  font-weight: normal;
-  font-family: "Roboto Mono", "Times New Roman";
-  display: flex;
-  margin: 45px;
-  padding: 0;
-  margin-top: -80px;
-}
-.pf__header__nav__menu li {
-  margin-right: 20px;
-  margin-top: -140px;
-}
-.pf__header__nav__logo {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  position: relative;
-  top: -60px;
-  left: 0;
-}
-.pf__header__nav__logo img {
-  width: 300%;
-  height: auto;
-}
-@media (max-width: 1024px) {
-  .pf__header__nav__logo {
-    font-size: 60px;
-  }
-}
-@media (max-width: 700px) {
-  .pf__header__nav__logo {
-    font-size: 40px;
-  }
+  padding: 0 0;
 }
 .pf__header__pergunta {
   font-family: "Roboto Mono", "Times New Roman";
   font-size: 80px;
-  top: -60px;
   width: 90%;
-  margin-top: -60px;
-  text-justify: center;
 }
+
+/* Estilos Mobile */
 @media (max-width: 1024px) {
-  .pf__header__pergunta {
-    font-size: 60px;
-    width: 80%;
-    margin: 0 auto;
-    top: -80px;
-    margin-top: -90px;
-  }
-}
-@media (max-width: 1024px) {
-  .pf__header__pergunta {
-    font-size: 60px;
-    width: 80%;
-    margin: 0 auto;
-    top: -80px;
-    margin-top: -90px;
-  }
-}
-@media (max-width: 700px) {
   .pf__header__pergunta {
     font-size: 40px;
-    width: 80%;
-    margin: 0 auto;
-    top: -80px;
-    margin-top: -90px;
+    width: 60%;
   }
-}
-
-/* Estilos para o ícone de hambúrguer e menu mobile */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  top: 40px; /* ajuste conforme necessário */
-  right: 20px;
-  z-index: 10000;
-}
-
-.hamburger-icon {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #000;
-  position: relative;
-}
-
-.hamburger-icon::before,
-.hamburger-icon::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 3px;
-  background-color: #000;
-  left: 0;
-}
-
-.hamburger-icon::before {
-  top: -8px;
-}
-
-.hamburger-icon::after {
-  top: 8px;
-}
-
-/* Media queries para mobile */
-@media (max-width: 1024px) {
-  /* Exibe o ícone de hambúrguer */
-  .menu-toggle {
-    display: block;
+  .pf__header__nav__logo {
+    left: -25px;
   }
-  /* Oculta o menu principal por padrão */
   .pf__header__nav__menu {
+    /* Sobrescreve os estilos desktop */
+    margin: 0;
+    padding: 10px;
+    left: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.7058823529);
+    align-items: flex-start;
     position: absolute;
-    top: 150px; /* posição abaixo do header */
-    margin-top: -200px;
-    right: -30px;
-    padding: 0 10px;
+    top: 70px; /* Posição vertical onde o menu inicia */
+    right: 15px;
     border-radius: 4px;
     z-index: 9999;
-    max-height: 0; /* fechado inicialmente */
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
   }
-  /* Exibe o menu quando ativado */
   .pf__header__nav__menu.active {
-    display: flex;
-    max-height: 500px;
+    max-height: 500px; /* Ajuste conforme o conteúdo */
+    background-color: rgba(255, 255, 255, 0.7058823529);
+    text-align: left;
   }
   .pf__header__nav__menu li {
-    margin: 10px 10px;
-    text-align: right;
+    margin: 20px 20px;
+  }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 80px; /* Ajuste conforme necessário */
+    right: 15px;
+    z-index: 10000;
+  }
+  .hamburger-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    position: relative;
+  }
+  .hamburger-icon::before,
+  .hamburger-icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    left: 0;
+  }
+  .hamburger-icon::before {
+    top: -8px;
+  }
+  .hamburger-icon::after {
+    top: 8px;
   }
 }
-/* Em telas maiores, garante que o ícone não apareça */
+/* Em telas maiores, esconde o ícone de hambúrguer */
 @media (min-width: 1025px) {
   .menu-toggle {
     display: none;
